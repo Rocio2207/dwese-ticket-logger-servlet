@@ -13,7 +13,6 @@
 
 <body>
 <!-- Esta directiva debe ir dentro del body para que tenga efecto sobre todos los mensajes del body -->
-<fmt:setBundle basename="messages"/>
 <form action="changeLanguage" method="get">
     <select name="lang" onchange="this.form.submit()">
         <option value="en" ${sessionScope.locale.language == 'en' ? 'selected' : ''}>English</option>

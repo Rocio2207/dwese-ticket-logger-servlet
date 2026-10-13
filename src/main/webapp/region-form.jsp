@@ -23,10 +23,10 @@
  <!-- Cuando una cadena de caracteres incluye a otra esta debe llevar comillas simples -->
  <c:choose>
  <c:when test="${region == null}">
- <input type="submit" value="<fmt:message key='msg.regionform.create' />" />
+ <input type="submit" value="<fmt:message key='msg.region-form.create' />" />
  </c:when>
  <c:otherwise>
- <input type="submit" value="<fmt:message key='msg.regionform.update' />" />
+ <input type="submit" value="<fmt:message key='msg.region-form.update' />" />
  </c:otherwise>
  </c:choose>
  </form>
