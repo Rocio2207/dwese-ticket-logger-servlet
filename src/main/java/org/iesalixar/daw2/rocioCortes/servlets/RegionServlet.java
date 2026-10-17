@@ -29,8 +29,7 @@ public class RegionServlet extends HttpServlet {
         }
     }
     /**
-     * Maneja las solicitudes GET al servlet. Según el parámetro "action", decide
-     qué método invocar.
+     * Maneja las solicitudes GET al servlet. Según el parámetro "action", decide qué método invocar.
      * @param request Solicitud HTTP.
      * @param response Respuesta HTTP.
      * @throws ServletException en caso de errores en el servlet.
@@ -179,7 +178,7 @@ public class RegionServlet extends HttpServlet {
         } catch (SQLException e) {
             if (e.getSQLState().equals("23505")) { // Código SQL para unique constraint violation
                 request.setAttribute("errorMessage", "El código de la región  debe ser único.");
-                        request.getRequestDispatcher("regionform.jsp").forward(request, response);
+                        request.getRequestDispatcher("region-form.jsp").forward(request, response);
             } else {
                 throw e;
             }
@@ -226,7 +225,7 @@ public class RegionServlet extends HttpServlet {
         } catch (SQLException e) {
             if (e.getSQLState().equals("23505")) { // Código SQL para unique constraint violation
                 request.setAttribute("errorMessage", "El código de la región debe ser único.");
-                        request.getRequestDispatcher("regionform.jsp").forward(request, response);
+                        request.getRequestDispatcher("region-form.jsp").forward(request, response);
             } else {
                 throw e;
             }
